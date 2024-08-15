@@ -1,0 +1,1 @@
+Imutils seems to be a operations library that works on top of cv2

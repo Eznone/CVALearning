@@ -1,0 +1,10 @@
+Cv2 seems to be a program that does the following:
+
+    * Image loading
+    * Image Display
+    * Image Writing
+    * Color Manipulation
+    * Drawing and Shapes
+    * Image Filtering
+    * Video Processing
+    * Face and Object Detection
