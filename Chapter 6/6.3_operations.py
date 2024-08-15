@@ -109,3 +109,26 @@ cv2.waitKey(0)
 
 merged = cv2.merge([B, G, R])
 cv2.imshow("Merged", merged)
+cv2.waitKey(0)
+
+# Merging individual GBRs to get a solid color
+zeros = np.zeros(image.shape[:2], dtype = "uint8")
+cv2.imshow("RedM", cv2.merge([zeros, zeros, R]))
+cv2.waitKey(0)
+cv2.imshow("GreenM", cv2.merge([zeros, G, zeros]))
+cv2.waitKey(0)
+cv2.imshow("BlueM", cv2.merge([B, zeros, zeros]))
+cv2.waitKey(0)
+
+# GrayScale, HSV, and L.A.B colorsets
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow("Grayscale", gray)
+cv2.waitKey(0)
+
+hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+cv2.imshow("HSV", hsv)
+cv2.waitKey(0)
+
+lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+cv2.imshow("LAB", lab)
+cv2.waitKey(0)
