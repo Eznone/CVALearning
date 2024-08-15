@@ -87,7 +87,6 @@ cv2.imshow("NOT", bitwiseNot)
 cv2.waitKey(0)
 
 # Masking operation
-
 mask = np.zeros(image.shape[:2], dtype = "uint8")
 (cX, cY) = (image.shape[1] // 2, image.shape[0] // 2)
 cv2.rectangle(mask, (cX - 75, cY -75), (cX + 75, cY + 75), 255, -1)
@@ -97,3 +96,16 @@ cv2.waitKey(0)
 masked = cv2.bitwise_and(image, image, mask = mask)
 cv2.imshow("Mask applied", masked)
 cv2.waitKey(0)
+
+# Splitting and mergining images
+# Splitting essentially means getting our image into seperate RGB channels
+(B, G, R) = cv2.split(image)
+cv2.imshow("Red", R)
+cv2.waitKey(0)
+cv2.imshow("Green", G)
+cv2.waitKey(0)
+cv2.imshow("Blue", B)
+cv2.waitKey(0)
+
+merged = cv2.merge([B, G, R])
+cv2.imshow("Merged", merged)
