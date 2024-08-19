@@ -10,10 +10,9 @@ args = vars(ap.parse_args())
 
 # Setting up the image
 image = cv2.imread(args["image"])
-cv2.imshow("Original", image)
-chans = cv2.split(image)
-colors = ("b", "g", "r")
+image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-hist = cv2.calcHist([image], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
-print("3D histogram shape: {}, with {} values".format(hist.shape, hist.flatten().shape[0]))
-plt.show()
+eq = cv2.equalizeHist(image)
+
+cv2.imshow("Histogram Equalization", np.hstack([image, eq]))
+cv2.waitKey(0)

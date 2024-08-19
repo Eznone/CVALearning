@@ -34,3 +34,4 @@ p = ax.imshow(hist, interpolation= "nearest")
 ax.set_title("2D Color Histogram for B and R")
 plt.colorbar(p)
 plt.show()
+
