@@ -24,3 +24,4 @@ plt.plot(hist)
 plt.xlim([0,256])
 plt.show()
 cv2.waitkey(0)
+
