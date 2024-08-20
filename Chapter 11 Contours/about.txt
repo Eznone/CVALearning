@@ -1,0 +1,6 @@
+OpenCV provides methods to find “curves” in an image,
+called contours. A contour is a curve of points, with no
+gaps in the curve. Contours are extremely useful for such
+things as shape approximation and analysis.
+In order to find contours in an image, you need to first obtain a binarization of the image, using either edge detection
+methods or thresholding
